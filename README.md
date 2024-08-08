@@ -1,50 +1,97 @@
-# React + TypeScript + Vite
+# Wordle Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+This project is a clone of the popular word game Wordle, implemented with React and TypeScript. It includes configurations for Vite, ESLint, Prettier, and Tailwind CSS to provide a modern development experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript for static typing.
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
+- **Vite**: Fast build tool and development server.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Nikhilpallavurk/wordle-clone.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd wordle-clone
+   ```
+3. Install dependencies using `pnpm`:
+   ```bash
+   pnpm install
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Scripts
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **`pnpm dev`**: Starts the development server with Vite.
+- **`pnpm build`**: Builds the project for production using TypeScript and Vite.
+- **`pnpm lint`**: Runs ESLint to check for code quality issues.
+- **`pnpm preview`**: Previews the built project locally.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Dependencies
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **React**: `^18.3.1` - JavaScript library for building user interfaces.
+- **PostCSS**: `^8.4.41` - Tool for transforming CSS with JavaScript plugins.
+- **Autoprefixer**: `^10.4.20` - PostCSS plugin for automatically adding vendor prefixes.
+- **Wordle Clone**: A local package or link specific to the project.
+
+## Dev Dependencies
+
+- **TypeScript**: `^5.5.3` - TypeScript language support.
+- **Vite**: `^5.4.0` - Build tool and development server.
+- **ESLint**: `^9.8.0` - Linting tool for JavaScript and TypeScript.
+- **Prettier**: Code formatter.
+- **Tailwind CSS**: `^3.4.9` - Utility-first CSS framework.
+- **@vitejs/plugin-react-swc**: Vite plugin for React with SWC support.
+- **TypeScript-ESLint**: Tools for integrating TypeScript with ESLint.
+
+## Configuration
+
+### ESLint
+
+Configured with:
+
+- **@eslint/js**: ESLint core rules.
+- **eslint-plugin-react-hooks**: Linting rules for React Hooks.
+- **eslint-plugin-react-refresh**: Plugin for React Refresh integration.
+
+### Prettier
+
+Configured to format TypeScript files and integrate with Tailwind CSS via `prettier-plugin-tailwindcss`.
+
+### Tailwind CSS
+
+Integrated for utility-first styling.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/your-feature
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -am 'Add new feature'
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature
+   ```
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- [Vite](https://vitejs.dev/) - Fast and modern build tool.
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework.
+- [Prettier](https://prettier.io/) - Code formatter.
+- [ESLint](https://eslint.org/) - Linting tool for JavaScript and TypeScript.
